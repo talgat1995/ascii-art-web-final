@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii-Art-Web</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1 class="banner">ASCII-ART-WEB</h1>
+</div>
+    <form action="/action" method="POST">
+        <label for="text">enter text</label>
+        <input type="text" id="text" name="text" placeholder="ascii characters only">
+        <br>
+        <br>
+        <label for="font">choose font</label>
+        <select name="font"> 
+            <option value=standard>STANDARD</option>
+            <option value=thinkertoy>THINKERTOY</option>
+            <option value=shadow>SHADOW</option>
+        <input class=submit type="submit" value="OK">
+    </form>
+</div>
+    <footer>
+        <pre id="ascii">{{printf "%s" .Str}}</pre>
+    </footer>
+    
+    <script>
+        var a = document.querySelector("#ascii")
+        var b = '{{printf "%s" .Str}}'
+        if (a.innerText == b) {
+            a.innerText = "\n\n\n\n\n\n\n"
+        }
+    </script>
+</body>
+</html>
